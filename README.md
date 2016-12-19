@@ -23,7 +23,7 @@ rmedian <- median(steps_by_day$steps)
 
 The `mean` is `r rmean` and the `median` is `r rmedian`.
 
-![plot of chunk unnamed-chunk-2](https://github.com/dmaurath/datasciencecoursera/blob/master/Reproducible%20Research%20Projects/Peer%20Assessment%201/Reproducible_Research_Project_1_Steps_files/figure-html/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-2](https://github.com/sachinvraje/reproducible_research_project1/blob/master/image-1.png) 
 
 ```r
 rmean <- mean(steps_by_day$steps)
@@ -44,7 +44,7 @@ steps_by_interval <- aggregate(steps ~ interval, data, mean)
 plot(steps_by_interval$interval,steps_by_interval$steps, type="l", xlab="Interval", ylab="Number of Steps",main="Average Number of Steps per Day by Interval")
 ```
 
-![plot of chunk unnamed-chunk-3](https://github.com/dmaurath/datasciencecoursera/blob/master/Reproducible%20Research%20Projects/Peer%20Assessment%201/Reproducible_Research_Project_1_Steps_files/figure-html/unnamed-chunk-3.png) 
+![plot of chunk unnamed-chunk-3](https://github.com/sachinvraje/reproducible_research_project1/blob/master/image-2.png) 
 
 ```r
 max_interval <- steps_by_interval[which.max(steps_by_interval$steps),1]
@@ -78,7 +78,7 @@ hist(steps_by_day$steps, main = paste("Total Steps Each Day"), col="red", xlab="
 legend("topright", c("Imputed", "Non-imputed"), col=c("blue", "red"), lwd=10)
 ```
 
-![plot of chunk unnamed-chunk-6](https://github.com/dmaurath/datasciencecoursera/blob/master/Reproducible%20Research%20Projects/Peer%20Assessment%201/Reproducible_Research_Project_1_Steps_files/figure-html/unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-6](https://github.com/sachinvraje/reproducible_research_project1/blob/master/image-3.png) 
 
 Calculate new mean and median for imputed data. 
 
@@ -120,5 +120,5 @@ library(lattice)
 
 xyplot(steps_by_interval_i$steps ~ steps_by_interval_i$interval|steps_by_interval_i$dow, main="Average Steps per Day by Interval",xlab="Interval", ylab="Steps",layout=c(1,2), type="l")
 ```
-![plot of chunk unnamed-chunk-10](https://github.com/dmaurath/datasciencecoursera/blob/master/Reproducible%20Research%20Projects/Peer%20Assessment%201/Reproducible_Research_Project_1_Steps_files/figure-html/unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-10](https://github.com/sachinvraje/reproducible_research_project1/blob/master/image-4.png) 
 
